@@ -1,6 +1,7 @@
 const statusText = document.querySelector("#status-text");
 const statusDetail = document.querySelector("#status-detail");
 const checkButton = document.querySelector("#check-button");
+const deployButton = document.querySelector(".deploy-button");
 
 async function checkApi() {
   statusText.textContent = "Consultando...";
@@ -30,3 +31,17 @@ async function checkApi() {
 }
 
 checkButton.addEventListener("click", checkApi);
+
+if (deployButton) {
+  deployButton.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    deployButton.classList.remove("is-launching");
+    void deployButton.offsetWidth;
+    deployButton.classList.add("is-launching");
+
+    window.setTimeout(() => {
+      window.open(deployButton.href, "_blank", "noopener,noreferrer");
+    }, 520);
+  });
+}
