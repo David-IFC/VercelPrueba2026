@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo para Vercel</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <p class="eyebrow">Proyecto de prueba</p>
+        <h1>Demo lista para subir a Vercel</h1>
+        <p class="lead">
+          Esta página estática llama a una función serverless para comprobar que
+          el despliegue funciona de verdad.
+        </p>
+
+        <div class="actions">
+          <button id="check-button" type="button">Probar API</button>
+          <a href="https://vercel.com/new" target="_blank" rel="noreferrer">
+            Subir a Vercel
+          </a>
+        </div>
+
+        <div class="status" id="status-box">
+          <span class="status-label">Estado</span>
+          <strong id="status-text">Pendiente de comprobacion</strong>
+          <p id="status-detail">
+            Pulsa el boton para consultar la funcion `/api/health`.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="/main.js"></script>
+  </body>
+</html>

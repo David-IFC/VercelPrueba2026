@@ -1,0 +1,10 @@
+{
+  "name": "vercel-demo-funcional",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Proyecto de prueba listo para desplegar en Vercel",
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "vercel dev"
+  }
+}
