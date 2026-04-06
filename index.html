@@ -9,17 +9,25 @@
   <body>
     <main class="page">
       <section class="card">
+        <div class="grid-lines" aria-hidden="true"></div>
+
         <p class="eyebrow">Proyecto de prueba</p>
         <h1>Demo lista para subir a Vercel</h1>
         <p class="lead">
-          Esta página estática llama a una función serverless para comprobar que
+          Esta pagina estatica llama a una funcion serverless para comprobar que
           el despliegue funciona de verdad.
         </p>
 
         <div class="actions">
           <button id="check-button" type="button">Probar API</button>
-          <a href="https://vercel.com/new" target="_blank" rel="noreferrer">
-            Subir a Vercel
+          <a
+            class="deploy-button"
+            href="https://vercel.com/new"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>Subir a Vercel</span>
+            <span class="deploy-glow" aria-hidden="true"></span>
           </a>
         </div>
 
