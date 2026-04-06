@@ -1,7 +1,8 @@
+const body = document.body;
 const statusText = document.querySelector("#status-text");
 const statusDetail = document.querySelector("#status-detail");
 const checkButton = document.querySelector("#check-button");
-const deployButton = document.querySelector(".deploy-button");
+const themeButton = document.querySelector("#theme-button");
 
 async function checkApi() {
   statusText.textContent = "Consultando...";
@@ -30,18 +31,20 @@ async function checkApi() {
   }
 }
 
+function toggleTheme() {
+  const isAltTheme = body.classList.toggle("alt-theme");
+
+  themeButton.classList.remove("is-switching");
+  void themeButton.offsetWidth;
+  themeButton.classList.add("is-switching");
+
+  themeButton.textContent = isAltTheme
+    ? "Volver a verde"
+    : "Cambiar paleta";
+}
+
 checkButton.addEventListener("click", checkApi);
 
-if (deployButton) {
-  deployButton.addEventListener("click", (event) => {
-    event.preventDefault();
-
-    deployButton.classList.remove("is-launching");
-    void deployButton.offsetWidth;
-    deployButton.classList.add("is-launching");
-
-    window.setTimeout(() => {
-      window.open(deployButton.href, "_blank", "noopener,noreferrer");
-    }, 520);
-  });
+if (themeButton) {
+  themeButton.addEventListener("click", toggleTheme);
 }
